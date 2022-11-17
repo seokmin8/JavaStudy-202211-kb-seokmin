@@ -1,4 +1,4 @@
-package j06반복;
+package j06_반복;
 
 public class Continue2 {
 
