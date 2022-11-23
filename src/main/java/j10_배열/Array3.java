@@ -28,7 +28,6 @@ public class Array3 {
 
     public static void main(String[] args) {
         Random random = new Random();
-        random.nextInt();
         int sum = 0;
 
         int[] randomArray = new int[10];
@@ -39,7 +38,7 @@ public class Array3 {
                 int randomNumber = random.nextInt(10) + 1;
                 boolean found = true;
                 for (int j = 0; j < randomArray.length; j++) {  // j인덱스
-                    if (randomArray[j] == randomNumber) {       // 들어있는값과 새로운값과 같은게 있으면false
+                    if (randomArray[j] == randomNumber) {       // 들어있는값과 새로운값과 같은게 있으면 false
                         found = false;
                         break;
                     }
@@ -83,6 +82,6 @@ public class Array3 {
             randomArray 배열 변수선언 및 생성(10개)
             1, 5, 3, 9, 5, ... 출력하기
             총합 구하기
-//         */
+         */
 //    }
 //}
