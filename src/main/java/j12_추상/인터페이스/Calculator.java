@@ -12,11 +12,10 @@ package j12_추상.인터페이스;
 public interface Calculator {
 
 //    public Calculator(){}  인터페이스는 생성자가 없다!! 변수가 없기때문!!
-
 //    private String name;  일반변수 사용불가
 //    public String name;  일반변수 사용불가
 
-    public int ERROR_CODE = -9999999;   // 선언 됨 ( FINAL 생략가능 ) 상수는 보통 잘 사용하지 않는다
+    public int ERROR_CODE = -9999999;   // 선언 됨 (FINAL 생략가능) 보통(상수) 잘 사용하지 않는다
 //    private int ERROR_CODE2 = -9999999;   선언되지 않음.
 
     public int calc(int[] values);      // 이런 메소드를 주로 사용한다 - (인터페이스)
@@ -24,5 +23,7 @@ public interface Calculator {
     public default void setErrorCode(){
 //        ERROR_CODE1 = 10;     상수라서 초기화 안됨
     }
-
 }
+
+
+// 인터페이스 -> 추상클래스와 달리, 다중 구현이 가능하다

@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Array3 {
 
-    public static int foundMinNumber(int[] numbers) {
+    public static int foundMinNumber(int [] numbers) {
         int min = numbers[0];   // 0 이 대입되지 않게 numbers[0] 을 대입해둔다
         for (int i = 0; i < numbers.length; i++) {
             if (min > numbers[i]) {

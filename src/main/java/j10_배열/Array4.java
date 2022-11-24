@@ -4,7 +4,7 @@ package j10_배열;
 
         public static int[] add(int[] array, int value) {
             int[] resultArray = new int[array.length + 1];  // 기존의 배열보다 인덱스가 1 큰 배열을 만든다
-
+// 6 0~4 5
             for(int i = 0; i < array.length; i++) {    // 기존배열의 상태를 그대로 대입, 제일 마지막값을 추가
                 resultArray[i] = array[i];
             }

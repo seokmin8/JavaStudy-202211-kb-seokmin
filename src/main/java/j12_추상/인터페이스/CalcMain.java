@@ -16,6 +16,7 @@ public class CalcMain {
         } else {
             System.out.println("result1 => " + result1);
         }
+
         calculator = new Salary();      // 급여정산 (calculator에 구현된 클래스가 달라짐)
         result2 = calculator.calc(salaryPay);
         if(result2 == 0){
