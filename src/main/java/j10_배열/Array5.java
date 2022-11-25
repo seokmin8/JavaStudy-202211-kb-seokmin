@@ -10,6 +10,8 @@ public class Array5 {
         int[] resultArray = new int[5];    // 현재는 5개의 인덱스 모두 0이 들어가있다!!0
 
 
+
+
         int a = 10;
         int b = 5;
         int c = 7;

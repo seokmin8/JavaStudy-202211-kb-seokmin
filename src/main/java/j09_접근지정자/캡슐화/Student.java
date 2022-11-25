@@ -3,11 +3,12 @@ package j09_접근지정자.캡슐화;
 public class Student {
     // 데이터는 중요하다!! private로 보호한다!!
     private String name;
-    public String gender;
+    public boolean gender;
+
 
     public Student() {}
 
-    public Student(String name, String gender){
+    public Student(String name, boolean gender){
         this.name = name;
         this.gender = gender;
     }
@@ -24,6 +25,6 @@ public class Student {
 
     public void printInfo(){
         System.out.println("Name : " + name);
-        System.out.println("Gender : " + gender);
+        System.out.println("Gender : " + (gender ? "남" : "여"));
     }
 }

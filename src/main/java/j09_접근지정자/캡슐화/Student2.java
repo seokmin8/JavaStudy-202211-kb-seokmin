@@ -38,6 +38,13 @@ public class Student2 {
     public void setGender(boolean gender) {
         this.gender = gender;
     }
+
+    public void stuData1(String name, String school, int year, boolean gender){
+        this.name = name;
+        this.school = school;
+        this.year = year;
+        this.gender = gender;
+    }
     // Alt + insert
 
 //    public String getSchool(){
