@@ -16,8 +16,8 @@ public class StudentList2 {
         // 6. new ArrayList<Hobby> 대신 asList(배열명)로
 
         // toArray는 배열로 변경될때 타입은 Object 타입으로 바뀌기 때문에 다운캐스팅을 해서 사용해야 함!
-
-        List<Hobby> hl =
+    	
+    	List<Hobby> hl =
 //                new ArrayList<Hobby>();    생략!
                 Arrays.asList(new Hobby[]{
                         new Hobby(1, "축구"),     // 여기는 hl.get(0) 이다
