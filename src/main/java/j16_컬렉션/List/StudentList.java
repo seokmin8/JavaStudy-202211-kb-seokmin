@@ -16,11 +16,11 @@ public class StudentList {
 //        students.add(student);    // 아래와 같은 방법으로도 가능
 //        students.add(new Student(20221100, "황석민", 20));
         // 2. add되어야 할것은 Student 객체 자체
-        students.add(new Student(20221101, "이승아", 21));
-        students.add(new Student(20221102, "김수현", 22));
-        students.add(new Student(20221103, "문경원", 23));
-        students.add(new Student(20221104, "홍지혜", 24));
-        students.add(new Student(20221105, "고동현", 25));
+        students.add(new Student(20221101, "이승아", 21, null));
+        students.add(new Student(20221102, "김수현", 22, null));
+        students.add(new Student(20221103, "문경원", 23, null));
+        students.add(new Student(20221104, "홍지혜", 24, null));
+        students.add(new Student(20221105, "고동현", 25, null));
 
         int size = students.size();
 
