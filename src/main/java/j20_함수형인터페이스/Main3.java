@@ -1,8 +1,12 @@
 package j20_함수형인터페이스;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Objects;
+import java.util.Set;
 import java.util.function.Consumer;
 
 public class Main3 {
@@ -42,6 +46,7 @@ public class Main3 {
         	
         	for (T t : this) {
         		  n  : names
+        	
         		String   자기자신! = list
         		  
             action.accept(t);
@@ -57,6 +62,36 @@ public class Main3 {
 		// 매개변수 = 컨슈머 객체, 리스트
 		// foreach로 리스트를 돌리고 하나씩 꺼낼 수 있다
 		// println(n); }; 까지가 accept 
+		System.out.println();
+		
+		//Map for-each
+		Map<String, String> subject = new HashMap<>();
+		
+		subject.put("java", "자바");
+		subject.put("python", "파이썬");
+		subject.put("javascript", "자바스크립트");
+		subject.put("C", "씨언어");
+		subject.put("Node.js", "노드제이에스");
+		
+		Set<String> keySet = subject.keySet();
+		keySet.forEach(key -> {
+			System.out.println(subject.get(key));
+		});
+		
+		System.out.println();
+		
+		Set<Entry<String, String>> entrySet = subject.entrySet();
+		entrySet.forEach(entry -> {
+			System.out.println(entry.getKey() + ": " + entry.getValue());
+		});
+		
+		System.out.println();
+		
+		subject.forEach((key, value) -> {
+			System.out.println(key + ": " + value);
+		});
+		// bi컨슈머 = 매개변수 2개일때
+		//for (Map.Entry<K, V> entry : >>>>this 빠지고<<<<entrySet()) {
 	}
 
 }
