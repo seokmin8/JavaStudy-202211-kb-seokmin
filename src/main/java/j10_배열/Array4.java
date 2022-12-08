@@ -4,14 +4,19 @@ package j10_배열;
 
         public static int[] add(int[] array, int value) {
             int[] resultArray = new int[array.length + 1];  // 기존의 배열보다 인덱스가 1 큰 배열을 만든다
-// 6 0~4 5
-            for(int i = 0; i < array.length; i++) {    // 기존배열의 상태를 그대로 대입, 제일 마지막값을 추가
-                resultArray[i] = array[i];
-            }
-            resultArray[array.length] = value;
 
+            for(int i = 0; i < array.length; i++) {     // 중복된 값 1개가 발견되면 인덱스가 1추가된 새 배열을 받고
+            											//기존배열의 상태를 그대로 대입, 제일 마지막값을 추가
+                resultArray[i] = array[i];
+            }	// 기존배열 길이만큼 반복동작, 
+            	// array1과 array2의 중복값이 있을 때 텅 비어있는 배열을 보내준다, array[i]는 중복된 값 1개!
+        		// 만약 중복값이 6일때? add가 호출 처음 호출된 resultArray[0]의 인덱스 값은 0이고 호출 될 때마다 1씩 늘어난다 
+            
+            resultArray[array.length] = value; // 배열 마지막 공간에 value를 넣어라
+            // array.length의 처음값은 0이다 여기에 새로운값=중복된값(value)을 대입!
+            // 그값을 리턴해주고 getDup메서드 resultArr에 전달된다
             return resultArray;
-        }
+        }	// 새로 만들어진 배열을 int[] resultArr 로 리턴(6행)
 
 
         public static int[] getDuplicateArray(int[] array1, int[] array2) {
@@ -22,11 +27,16 @@ package j10_배열;
             // i=2 j=0 일때 [0]인덱스에 3, value 3을 add로 전달
             // length+1 은 [0,1] 형태로 있을것
 
-            for(int i = 0; i < array1.length; i++) {        // array1 에
+            for(int i = 0; i < array1.length; i++) {        // array1의 길이 10, 반복중 array1[]의 첫번째 값은 1이다? 
                 for(int j = 0; j < array2.length; j++) {    // 2를
                     if(array1[i] == array2[j]) {    // array1의 [0]과 array2[0]부터 비교반복 시작
                         resultArray = add(resultArray, array1[i]);  // resultArray는 배열이다! 중복된 값을 result에 대입
-                    }
+                        // 2번째 중복된 값이 나타났을 때 resultArr에는 5가 들어있고 인덱스는 1, array[]에는 7이 전달되고 다시 위 add로 전달된다
+                        // (0) ~ (0 ~ 9) =  1 == 6,~ 6 == 6 이 처음 중복값이 나타난다 그 후의 반복문의 if는 실행 x
+                        // result의 공간은 0(아무것도 없다) add를 넘겨준다 result는 0 , array[]는 6 대입시킨다
+                        // 이후 add의 array.length의 현재는 0 get 에서 add 매개변수로 값이 전달된다 
+                        // 
+                    } 	
                 }
             }
 

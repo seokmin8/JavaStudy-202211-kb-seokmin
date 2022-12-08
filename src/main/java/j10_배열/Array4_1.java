@@ -15,6 +15,7 @@ public class Array4_1 {
 
     public static int[] getDuplicateArray(int[] array1, int[] array2) {
         int[] resultArray = new int[0];
+        
         int arrayLength = array1.length;
 
         if (array1.length > array2.length) {
